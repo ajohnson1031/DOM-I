@@ -57,3 +57,12 @@ const nav = Array.from(document.querySelector("nav").children),
     siteContent["nav"]["nav-item-6"]
   ],
   navElems = nav.map((elem, i) => (elem.textContent = navTexts[i]));
+
+//Updates the CTA
+const ctaHeader = document.querySelector(".cta .cta-text h1"),
+  ctaBtn = document.querySelector(".cta .cta-text button"),
+  ctaImg = document.querySelector(".cta img");
+
+ctaHeader.textContent = siteContent["cta"]["h1"];
+ctaBtn.textContent = siteContent["cta"]["button"];
+ctaImg.src = siteContent["cta"]["img-src"];
