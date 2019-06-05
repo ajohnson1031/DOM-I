@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   cta: {
-    h1: "DOM Is Awesome",
+    h1: "DOM\nIs\nAwesome",
     button: "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -64,6 +64,7 @@ const ctaHeader = document.querySelector(".cta .cta-text h1"),
   ctaImg = document.querySelector(".cta img");
 
 ctaHeader.textContent = siteContent["cta"]["h1"];
+ctaHeader.style.whiteSpace = "pre";
 ctaBtn.textContent = siteContent["cta"]["button"];
 ctaImg.src = siteContent["cta"]["img-src"];
 
@@ -110,3 +111,7 @@ contactHeader.textContent = siteContent["contact"]["contact-h4"];
 const contactElems = contactParas.map(
   (elem, i) => (elem.textContent = contactParaTexts[i])
 );
+
+//Updates footer text
+const footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"];
