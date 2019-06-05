@@ -95,3 +95,18 @@ const mcParaElems = mcParas.map(
 );
 
 mcImg.src = siteContent["main-content"]["middle-img-src"];
+
+//Updates contact section
+const contactHeader = document.querySelector(".contact h4"),
+  contactParas = Array.from(document.querySelectorAll(".contact p")),
+  contactParaTexts = [
+    siteContent["contact"]["address"],
+    siteContent["contact"]["phone"],
+    siteContent["contact"]["email"]
+  ];
+
+contactHeader.textContent = siteContent["contact"]["contact-h4"];
+
+const contactElems = contactParas.map(
+  (elem, i) => (elem.textContent = contactParaTexts[i])
+);
