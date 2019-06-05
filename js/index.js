@@ -66,3 +66,32 @@ const ctaHeader = document.querySelector(".cta .cta-text h1"),
 ctaHeader.textContent = siteContent["cta"]["h1"];
 ctaBtn.textContent = siteContent["cta"]["button"];
 ctaImg.src = siteContent["cta"]["img-src"];
+
+//Updates main content
+const mcHeaders = Array.from(document.querySelectorAll(".main-content h4")),
+  mcHeaderTexts = [
+    siteContent["main-content"]["features-h4"],
+    siteContent["main-content"]["about-h4"],
+    siteContent["main-content"]["services-h4"],
+    siteContent["main-content"]["product-h4"],
+    siteContent["main-content"]["vision-h4"]
+  ],
+  mcParas = Array.from(document.querySelectorAll(".main-content p")),
+  mcParaTexts = [
+    siteContent["main-content"]["features-content"],
+    siteContent["main-content"]["about-content"],
+    siteContent["main-content"]["services-content"],
+    siteContent["main-content"]["product-content"],
+    siteContent["main-content"]["vision-content"]
+  ],
+  mcImg = document.querySelector(".main-content .middle-img");
+
+const mcHeaderElems = mcHeaders.map(
+  (elem, i) => (elem.textContent = mcHeaderTexts[i])
+);
+
+const mcParaElems = mcParas.map(
+  (elem, i) => (elem.textContent = mcParaTexts[i])
+);
+
+mcImg.src = siteContent["main-content"]["middle-img-src"];
