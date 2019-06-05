@@ -47,7 +47,13 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 //Updates the nav element
-let nav = Array.from(document.querySelector("nav").children);
-navTexts = ["Services", "Product", "Vision", "Features", "About", "Contact"];
-
-const navElems = nav.map((elem, i) => (elem.textContent = navTexts[i]));
+const nav = Array.from(document.querySelector("nav").children),
+  navTexts = [
+    siteContent["nav"]["nav-item-1"],
+    siteContent["nav"]["nav-item-2"],
+    siteContent["nav"]["nav-item-3"],
+    siteContent["nav"]["nav-item-4"],
+    siteContent["nav"]["nav-item-5"],
+    siteContent["nav"]["nav-item-6"]
+  ],
+  navElems = nav.map((elem, i) => (elem.textContent = navTexts[i]));
