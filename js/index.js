@@ -58,6 +58,21 @@ const nav = Array.from(document.querySelector("nav").children),
   ],
   navElems = nav.map((elem, i) => (elem.textContent = navTexts[i]));
 
+const navContainer = document.querySelector("nav");
+const newNavOne = document.createElement("a");
+const newNavTwo = document.createElement("a");
+
+newNavOne.setAttribute.href = "#";
+newNavOne.textContent = "Portfolio";
+navContainer.appendChild(newNavOne);
+
+newNavTwo.setAttribute.href = "#";
+newNavTwo.textContent = "Charity";
+navContainer.appendChild(newNavTwo);
+
+const a = Array.from(document.querySelectorAll("a"));
+a.map(elem => (elem.style.color = "green"));
+
 //Updates the CTA
 const ctaHeader = document.querySelector(".cta .cta-text h1"),
   ctaBtn = document.querySelector(".cta .cta-text button"),
