@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   cta: {
-    h1: "DOM\nIs\nAwesome",
+    h1: "DOM Is Awesome",
     button: "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -74,6 +74,7 @@ const a = Array.from(document.querySelectorAll("a"));
 a.map(elem => (elem.style.color = "green"));
 
 //Updates the CTA
+siteContent.cta.h1 = "DOM\nIs\nAwesome";
 const ctaHeader = document.querySelector(".cta .cta-text h1"),
   ctaBtn = document.querySelector(".cta .cta-text button"),
   ctaImg = document.querySelector(".cta img");
